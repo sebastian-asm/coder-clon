@@ -29,6 +29,10 @@ ul {
   list-style-type: none;
 }
 
+p {
+  line-height: 1.5;
+}
+
 .whatsapp {
   position: fixed;
   bottom: 40px;
@@ -42,7 +46,6 @@ ul {
 }
 
 // mixin
-// @mixin templateGrid($cantidadCol, $gap) {
 @mixin templateGrid($cantidadCol) {
   display: grid;
   grid-template-columns: repeat($cantidadCol, 1fr);

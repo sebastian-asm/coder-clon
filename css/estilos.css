@@ -23,12 +23,15 @@ a {
 ul {
   list-style-type: none; }
 
+p {
+  line-height: 1.5; }
+
 .whatsapp {
   position: fixed;
   bottom: 40px;
   right: 20px; }
 
-.contenedor, .encabezado__contenido, .hero__contenido, .cursos__contenido, .estadisticas__contenido {
+.contenedor, .encabezado__contenido, .pie-pagina__contenido, .hero__contenido, .cursos__contenido, .estadisticas__contenido {
   max-width: 1200px;
   margin: 0 auto; }
 
@@ -82,8 +85,6 @@ ul {
   color: #e2e8f0;
   padding: 60px 20px; }
   .pie-pagina__contenido {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px; }
@@ -99,6 +100,40 @@ ul {
       transition: all 0.3s; }
       .pie-pagina__contenido-lista a:hover {
         color: #22c55e; }
+    .pie-pagina__contenido-rrss {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 30px; }
+      .pie-pagina__contenido-rrss .rs-facebook {
+        color: #e2e8f0;
+        font-size: 30px;
+        transition: all 0.3s; }
+        .pie-pagina__contenido-rrss .rs-facebook:hover {
+          color: #2279e4; }
+      .pie-pagina__contenido-rrss .rs-instagram {
+        color: #e2e8f0;
+        font-size: 30px;
+        transition: all 0.3s; }
+        .pie-pagina__contenido-rrss .rs-instagram:hover {
+          color: #c92d8f; }
+      .pie-pagina__contenido-rrss .rs-twitter {
+        color: #e2e8f0;
+        font-size: 30px;
+        transition: all 0.3s; }
+        .pie-pagina__contenido-rrss .rs-twitter:hover {
+          color: #55acee; }
+      .pie-pagina__contenido-rrss .rs-whatsapp {
+        color: #e2e8f0;
+        font-size: 30px;
+        transition: all 0.3s; }
+        .pie-pagina__contenido-rrss .rs-whatsapp:hover {
+          color: green; }
+      .pie-pagina__contenido-rrss .rs-tiktok {
+        color: #e2e8f0;
+        font-size: 30px;
+        transition: all 0.3s; }
+        .pie-pagina__contenido-rrss .rs-tiktok:hover {
+          color: yellow; }
   .pie-pagina__copyright {
     margin-top: 40px;
     text-align: center;
@@ -169,7 +204,8 @@ ul {
         .cursos__contenido .tarjeta__encabezado-imagen {
           width: 100%;
           border-radius: 10px;
-          margin-bottom: 20px; }
+          margin-bottom: 20px;
+          object-fit: cover; }
         .cursos__contenido .tarjeta__encabezado-etiqueta {
           padding: 8px;
           position: absolute;
@@ -218,16 +254,18 @@ ul {
         display: block;
         margin-top: 5px; }
 
-@media (max-width: 576px) {
-  .cursos__contenido {
-    grid-template-columns: 1fr; }
-  .estadisticas__contenido {
-    flex-direction: column; }
-    .estadisticas__contenido-dato {
-      margin: 30px 0; } }
-
 @media (max-width: 992px) {
   .hero__contenido {
     grid-template-columns: 1fr; }
   .cursos__contenido {
     grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 768px) {
+  .cursos__contenido {
+    grid-template-columns: 1fr; } }
+
+@media (max-width: 576px) {
+  .estadisticas__contenido {
+    flex-direction: column; }
+    .estadisticas__contenido-dato {
+      margin: 30px 0; } }

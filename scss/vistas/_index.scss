@@ -6,7 +6,6 @@
   &__contenido {
     @extend .contenedor;
     @include templateGrid(2);
-    // @include templateGrid(2, 80px);
     align-items: center;
 
     &-info {
@@ -88,6 +87,7 @@
           width: 100%;
           border-radius: $defaultSize;
           margin-bottom: 20px;
+          object-fit: cover;
         }
 
         &-etiqueta {
@@ -158,20 +158,6 @@
   }
 }
 
-@media (max-width: $bpSmall) {
-  .cursos__contenido {
-    grid-template-columns: 1fr;
-  }
-
-  .estadisticas__contenido {
-    flex-direction: column;
-
-    &-dato {
-      margin: 30px 0;
-    }
-  }
-}
-
 @media (max-width: $bpLarge) {
   .hero__contenido {
     grid-template-columns: 1fr;
@@ -179,5 +165,21 @@
 
   .cursos__contenido {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $bpMedium) {
+  .cursos__contenido {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: $bpSmall) {
+  .estadisticas__contenido {
+    flex-direction: column;
+
+    &-dato {
+      margin: 30px 0;
+    }
   }
 }

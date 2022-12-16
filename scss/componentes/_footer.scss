@@ -4,11 +4,8 @@
   padding: 60px 20px;
 
   &__contenido {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    @extend .contenedor;
+    @include templateGrid(3);
 
     h4 {
       color: $primary;
@@ -28,6 +25,34 @@
 
         &:hover {
           color: $primary;
+        }
+      }
+    }
+
+    &-rrss {
+      @include templateFlex(space-evenly, false);
+      margin-top: 30px;
+
+      // maps
+      // llave: valor
+      $iconosSocial: (
+        facebook: #2279e4,
+        instagram: #c92d8f,
+        twitter: #55acee,
+        whatsapp: green,
+        tiktok: yellow
+      );
+
+      // ciclo (bucle)
+      @each $nombreRedSocial, $colorRedSocial in $iconosSocial {
+        .rs-#{$nombreRedSocial} {
+          color: $fontLight;
+          font-size: 30px;
+          transition: $transition;
+
+          &:hover {
+            color: $colorRedSocial;
+          }
         }
       }
     }
