@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../recursos/tipografias/Lato-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../recursos/tipografias/Lato-Bold.ttf');
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Lato';
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+}
+
+// extends
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// mixin
+// @mixin templateGrid($cantidadCol, $gap) {
+@mixin templateGrid($cantidadCol) {
+  display: grid;
+  grid-template-columns: repeat($cantidadCol, 1fr);
+  gap: 50px;
+}
+
+@mixin templateFlex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+
+  @if ($align == true) {
+    align-items: center;
+  }
+}

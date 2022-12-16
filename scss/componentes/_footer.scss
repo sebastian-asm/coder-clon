@@ -1,0 +1,47 @@
+.pie-pagina {
+  background-color: $bgDark;
+  color: $fontLight;
+  padding: 60px 20px;
+
+  &__contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    h4 {
+      color: $primary;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    &-lista {
+      li {
+        margin: 10px 0;
+      }
+
+      a {
+        color: $fontLight;
+        transition: $transition;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 40px;
+    text-align: center;
+    color: #94a3b8;
+  }
+}
+
+@media (max-width: $bpSmall) {
+  .pie-pagina__contenido {
+    grid-template-columns: 1fr;
+  }
+}

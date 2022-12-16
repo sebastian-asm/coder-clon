@@ -1,0 +1,183 @@
+.hero {
+  background-image: linear-gradient(45deg, #14532d, $primary);
+  padding: 60px 20px;
+  color: $fontLight;
+
+  &__contenido {
+    @extend .contenedor;
+    @include templateGrid(2);
+    // @include templateGrid(2, 80px);
+    align-items: center;
+
+    &-info {
+      h1 {
+        color: #fff;
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+
+      a {
+        padding: 15px 30px;
+        background-color: $bgDark;
+        color: $fontLight;
+        font-weight: bold;
+        border-radius: $defaultSize;
+        transition: $transition;
+
+        &:hover {
+          background-color: #1a2748;
+        }
+      }
+    }
+
+    &-video {
+      width: 100%;
+      border-radius: $defaultSize;
+      box-shadow: $shadow;
+      transition: $transition;
+
+      &:hover {
+        transform: rotate(5deg);
+      }
+    }
+  }
+}
+
+.cursos {
+  margin-top: 60px;
+  padding: 0 20px;
+
+  &__titulo {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  &__contenido {
+    @extend .contenedor;
+    @include templateGrid(3);
+
+    .tarjeta {
+      background-color: #fff;
+      border-radius: $defaultSize;
+      padding: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      transition: $transition;
+
+      &:hover {
+        transform: translateY(-15px);
+      }
+
+      &__titulo {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+
+      &__descripcion {
+        margin-bottom: 40px;
+      }
+
+      &__encabezado {
+        position: relative;
+
+        &-imagen {
+          width: 100%;
+          border-radius: $defaultSize;
+          margin-bottom: 20px;
+        }
+
+        &-etiqueta {
+          padding: 8px;
+          position: absolute;
+          right: 0;
+          color: #fff;
+          background-color: rgba(255, 255, 255, 0.5);
+          border-radius: 0 10px 0 10px;
+          text-transform: uppercase;
+        }
+
+        &-etiqueta--destacada {
+          font-weight: bold;
+        }
+      }
+
+      &__enlace {
+        background-color: $primary;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        border-radius: $defaultSize;
+        color: #fff;
+        padding: 15px 0;
+        font-weight: bold;
+        transition: $transition;
+        position: relative;
+
+        &:hover {
+          background-color: #1ca24d;
+        }
+
+        &:hover::after {
+          content: '\279c';
+          position: absolute;
+          right: 20px;
+        }
+      }
+    }
+  }
+}
+
+.estadisticas {
+  background-image: url('../recursos/imagenes/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 150px 20px;
+  margin-top: 80px;
+
+  &__contenido {
+    @extend .contenedor;
+    @include templateFlex(space-evenly, false);
+
+    &-dato {
+      font-size: 40px;
+      text-align: center;
+
+      span {
+        font-size: 20px;
+        display: block;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: $bpSmall) {
+  .cursos__contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .estadisticas__contenido {
+    flex-direction: column;
+
+    &-dato {
+      margin: 30px 0;
+    }
+  }
+}
+
+@media (max-width: $bpLarge) {
+  .hero__contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .cursos__contenido {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../recursos/tipografias/Lato-Regular.ttf");
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../recursos/tipografias/Lato-Bold.ttf");
+  font-weight: bold; }
+
+body {
+  font-family: 'Lato';
+  background-color: #eee; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style-type: none; }
+
+.whatsapp {
+  position: fixed;
+  bottom: 40px;
+  right: 20px; }
+
+.contenedor, .encabezado__contenido, .hero__contenido, .cursos__contenido, .estadisticas__contenido {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.encabezado {
+  background-color: #0f172a;
+  padding: 30px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1; }
+  .encabezado__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .encabezado__contenido-logo {
+      color: #22c55e; }
+      .encabezado__contenido-logo:hover::after {
+        content: 'inicio';
+        color: #e2e8f0;
+        font-size: 14px;
+        margin-left: 5px; }
+    .encabezado__contenido-menu {
+      display: flex;
+      align-items: center; }
+      .encabezado__contenido-menu a {
+        color: #e2e8f0;
+        font-weight: bold;
+        transition: all 0.3s; }
+        .encabezado__contenido-menu a:hover {
+          color: #22c55e; }
+      .encabezado__contenido-menu li {
+        margin: 0 15px;
+        transition: all 0.3s; }
+        .encabezado__contenido-menu li:last-child {
+          border: 1px solid #22c55e;
+          padding: 10px;
+          border-radius: 10px;
+          margin-right: 0; }
+        .encabezado__contenido-menu li:active {
+          transform: scale(0.9); }
+    .encabezado__contenido-menu-celular {
+      display: none; }
+
+@media (max-width: 768px) {
+  .encabezado__contenido-menu {
+    display: none; }
+  .encabezado__contenido-menu-celular {
+    display: inline-block; } }
+
+.pie-pagina {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 60px 20px; }
+  .pie-pagina__contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px; }
+    .pie-pagina__contenido h4 {
+      color: #22c55e;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 20px; }
+    .pie-pagina__contenido-lista li {
+      margin: 10px 0; }
+    .pie-pagina__contenido-lista a {
+      color: #e2e8f0;
+      transition: all 0.3s; }
+      .pie-pagina__contenido-lista a:hover {
+        color: #22c55e; }
+  .pie-pagina__copyright {
+    margin-top: 40px;
+    text-align: center;
+    color: #94a3b8; }
+
+@media (max-width: 576px) {
+  .pie-pagina__contenido {
+    grid-template-columns: 1fr; } }
+
+.hero {
+  background-image: linear-gradient(45deg, #14532d, #22c55e);
+  padding: 60px 20px;
+  color: #e2e8f0; }
+  .hero__contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    align-items: center; }
+    .hero__contenido-info h1 {
+      color: #fff;
+      font-size: 50px;
+      margin-bottom: 20px; }
+    .hero__contenido-info p {
+      margin-bottom: 40px; }
+    .hero__contenido-info a {
+      padding: 15px 30px;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: all 0.3s; }
+      .hero__contenido-info a:hover {
+        background-color: #1a2748; }
+    .hero__contenido-video {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      transition: all 0.3s; }
+      .hero__contenido-video:hover {
+        transform: rotate(5deg); }
+
+.cursos {
+  margin-top: 60px;
+  padding: 0 20px; }
+  .cursos__titulo {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 30px; }
+  .cursos__contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px; }
+    .cursos__contenido .tarjeta {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      transition: all 0.3s; }
+      .cursos__contenido .tarjeta:hover {
+        transform: translateY(-15px); }
+      .cursos__contenido .tarjeta__titulo {
+        margin-bottom: 20px;
+        font-size: 20px; }
+      .cursos__contenido .tarjeta__descripcion {
+        margin-bottom: 40px; }
+      .cursos__contenido .tarjeta__encabezado {
+        position: relative; }
+        .cursos__contenido .tarjeta__encabezado-imagen {
+          width: 100%;
+          border-radius: 10px;
+          margin-bottom: 20px; }
+        .cursos__contenido .tarjeta__encabezado-etiqueta {
+          padding: 8px;
+          position: absolute;
+          right: 0;
+          color: #fff;
+          background-color: rgba(255, 255, 255, 0.5);
+          border-radius: 0 10px 0 10px;
+          text-transform: uppercase; }
+        .cursos__contenido .tarjeta__encabezado-etiqueta--destacada {
+          font-weight: bold; }
+      .cursos__contenido .tarjeta__enlace {
+        background-color: #22c55e;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        border-radius: 10px;
+        color: #fff;
+        padding: 15px 0;
+        font-weight: bold;
+        transition: all 0.3s;
+        position: relative; }
+        .cursos__contenido .tarjeta__enlace:hover {
+          background-color: #1ca24d; }
+        .cursos__contenido .tarjeta__enlace:hover::after {
+          content: '\279c';
+          position: absolute;
+          right: 20px; }
+
+.estadisticas {
+  background-image: url("../recursos/imagenes/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 150px 20px;
+  margin-top: 80px; }
+  .estadisticas__contenido {
+    display: flex;
+    justify-content: space-evenly; }
+    .estadisticas__contenido-dato {
+      font-size: 40px;
+      text-align: center; }
+      .estadisticas__contenido-dato span {
+        font-size: 20px;
+        display: block;
+        margin-top: 5px; }
+
+@media (max-width: 576px) {
+  .cursos__contenido {
+    grid-template-columns: 1fr; }
+  .estadisticas__contenido {
+    flex-direction: column; }
+    .estadisticas__contenido-dato {
+      margin: 30px 0; } }
+
+@media (max-width: 992px) {
+  .hero__contenido {
+    grid-template-columns: 1fr; }
+  .cursos__contenido {
+    grid-template-columns: repeat(2, 1fr); } }

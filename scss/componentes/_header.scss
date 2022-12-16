@@ -1,0 +1,70 @@
+.encabezado {
+  background-color: $bgDark;
+  padding: 30px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &__contenido {
+    @extend .contenedor;
+    @include templateFlex(space-between, true);
+
+    &-logo {
+      color: $primary;
+
+      &:hover::after {
+        content: 'inicio';
+        color: $fontLight;
+        font-size: 14px;
+        margin-left: 5px;
+      }
+    }
+
+    &-menu {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: $fontLight;
+        font-weight: bold;
+        transition: $transition;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      li {
+        margin: 0 15px;
+        transition: $transition;
+
+        &:last-child {
+          border: 1px solid $primary;
+          padding: $defaultSize;
+          border-radius: $defaultSize;
+          margin-right: 0;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    &-menu-celular {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $bpMedium) {
+  .encabezado__contenido {
+    &-menu {
+      display: none;
+    }
+
+    &-menu-celular   {
+      display: inline-block;
+    }
+  }
+}
