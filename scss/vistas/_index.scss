@@ -20,12 +20,8 @@
       }
 
       a {
+        @extend .templateButton;
         padding: 15px 30px;
-        background-color: $bgDark;
-        color: $fontLight;
-        font-weight: bold;
-        border-radius: $defaultSize;
-        transition: $transition;
 
         &:hover {
           background-color: #1a2748;

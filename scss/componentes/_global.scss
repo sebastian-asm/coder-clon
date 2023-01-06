@@ -45,6 +45,18 @@ p {
   margin: 0 auto;
 }
 
+.templateButton {
+  display: inline-block;
+  color: $fontLight;
+  border-radius: $defaultSize;
+  cursor: pointer;
+  transition: $transition;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  background-color: $bgDark;
+}
+
 // mixin
 @mixin templateGrid($cantidadCol) {
   display: grid;

@@ -31,9 +31,20 @@ p {
   bottom: 40px;
   right: 20px; }
 
-.contenedor, .encabezado__contenido, .pie-pagina__contenido, .hero__contenido, .cursos__contenido, .estadisticas__contenido {
+.contenedor, .encabezado__contenido, .pie-pagina__contenido, .hero__contenido, .cursos__contenido, .estadisticas__contenido, .login {
   max-width: 1200px;
   margin: 0 auto; }
+
+.templateButton, .hero__contenido-info a, .login__formulario button {
+  display: inline-block;
+  color: #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  background-color: #0f172a; }
 
 .encabezado {
   background-color: #0f172a;
@@ -179,12 +190,7 @@ p {
     .hero__contenido-info p {
       margin-bottom: 40px; }
     .hero__contenido-info a {
-      padding: 15px 30px;
-      background-color: #0f172a;
-      color: #e2e8f0;
-      font-weight: bold;
-      border-radius: 10px;
-      transition: all 0.3s; }
+      padding: 15px 30px; }
       .hero__contenido-info a:hover {
         background-color: #1a2748; }
     .hero__contenido-video {
@@ -289,3 +295,51 @@ p {
     flex-direction: column; }
     .estadisticas__contenido-dato {
       margin: 30px 0; } }
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 102px); }
+  .login__titulo {
+    margin-bottom: 25px; }
+    .login__titulo i {
+      margin-right: 10px; }
+  .login__formulario {
+    width: 50%;
+    padding: 0 20px; }
+    .login__formulario input[type='email'],
+    .login__formulario input[type='password'] {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      outline: 2px solid transparent;
+      transition: all 0.3s; }
+      .login__formulario input[type='email']:focus,
+      .login__formulario input[type='password']:focus {
+        outline: 2px solid #0f172a; }
+    .login__formulario input[type='checkbox'] {
+      margin-top: 30px;
+      margin-right: 5px; }
+    .login__formulario button {
+      width: 100%;
+      margin-top: 40px;
+      padding: 15px; }
+      .login__formulario button:hover {
+        background-color: #1a2748; }
+
+@media (max-width: 992px) {
+  .login__formulario {
+    width: 55%; } }
+
+@media (max-width: 768px) {
+  .login__formulario {
+    width: 65%; } }
+
+@media (max-width: 576px) {
+  .login__formulario {
+    width: 100%; } }

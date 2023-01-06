@@ -1,72 +1,69 @@
-// .login {
-//   @extend .contenedor;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   height: calc(100vh - 102px);
+.login {
+  @extend .contenedor;
+  @include templateFlex(center, true);
+  flex-direction: column;
+  height: calc(100vh - 102px);
 
-//   &__titulo {
-//     margin-bottom: 25px;
+  &__titulo {
+    margin-bottom: 25px;
 
-//     i {
-//       margin-right: 10px;
-//     }
-//   }
+    i {
+      margin-right: 10px;
+    }
+  }
 
-//   &__formulario {
-//     width: 50%;
-//     padding: 0 20px;
+  &__formulario {
+    width: 50%;
+    padding: 0 20px;
 
-//     input[type='email'],
-//     input[type='password'] {
-//       display: block;
-//       width: 100%;
-//       margin-top: 20px;
-//       padding: 15px;
-//       border-radius: $borderRadius;
-//       border: none;
-//       outline: 2px solid transparent;
-//       transition: $transition;
+    input[type='email'],
+    input[type='password'] {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: $defaultSize;
+      border: none;
+      outline: 2px solid transparent;
+      transition: $transition;
 
-//       &:focus {
-//         outline: 2px solid $bgDark;
-//       }
-//     }
+      &:focus {
+        outline: 2px solid $bgDark;
+      }
+    }
 
-//     input[type='checkbox'] {
-//       margin-top: 30px;
-//       margin-right: 5px;
-//     }
+    input[type='checkbox'] {
+      margin-top: 30px;
+      margin-right: 5px;
+    }
 
-//     button {
-//       @extend .templateButton;
-//       width: 100%;
-//       margin-top: 40px;
-//       background-color: $bgDark;
-//       padding: 15px;
+    button {
+      @extend .templateButton;
+      width: 100%;
+      margin-top: 40px;
+      padding: 15px;
 
-//       &:hover {
-//         background-color: #1a2748;
-//       }
-//     }
-//   }
-// }
+      &:hover {
+        background-color: #1a2748;
+      }
+    }
+  }
+}
 
-// @media (max-width: $bpLarge) {
-//   .login__formulario {
-//     width: 55%;
-//   }
-// }
+@media (max-width: $bpLarge) {
+  .login__formulario {
+    width: 55%;
+  }
+}
 
-// @media (max-width: $bpMedium) {
-//   .login__formulario {
-//     width: 65%;
-//   }
-// }
+@media (max-width: $bpMedium) {
+  .login__formulario {
+    width: 65%;
+  }
+}
 
-// @media (max-width: $bpSmall) {
-//   .login__formulario {
-//     width: 100%;
-//   }
-// }
+@media (max-width: $bpSmall) {
+  .login__formulario {
+    width: 100%;
+  }
+}
