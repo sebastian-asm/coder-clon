@@ -20,6 +20,7 @@
       }
     }
 
+    // desktop
     &-menu {
       display: flex;
       align-items: center;
@@ -51,8 +52,41 @@
       }
     }
 
+    // mobile
     &-menu-celular {
       display: none;
+
+      &:hover > ul {
+        display: block;
+      }
+
+      i {
+        font-size: 35px;
+        color: $fontLight;
+      }
+
+      ul {
+        display: none;
+        position: absolute; // body
+        right: 0;
+        top: 100px;
+        width: 100%;
+        background-color: $bgDark;
+
+        li {
+          padding: 25px 0;
+          text-align: center;
+
+          a {
+            color: $fontLight;
+            font-weight: bold;
+          }
+
+          &:nth-child(odd) {
+            background-color: #1a2748;
+          }
+        }
+      }
     }
   }
 }
